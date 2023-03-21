@@ -28,6 +28,9 @@ public class AddServlet extends HttpServlet {
         brand.setDescription(description);
         brand.setStatus(Integer.parseInt(status));
 
+        // 3. 调用service完成添加
+        service.add(brand);
+
     }
 
     @Override
