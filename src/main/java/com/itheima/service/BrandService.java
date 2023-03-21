@@ -12,6 +12,10 @@ public class BrandService {
     // 调用BrandMapper.selectAll()
     SqlSessionFactory factory = SqlSessionFactoryUtils.getSqlSessionFactory();
 
+    /**
+     * 查询所有
+     * @return
+     */
     public List<Brand> selectAll(){
 
         // 2. 获取sqlSession
