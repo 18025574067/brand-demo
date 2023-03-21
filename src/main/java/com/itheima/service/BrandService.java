@@ -48,6 +48,8 @@ public class BrandService {
 
         // 5. 提交数据
         sqlSession.commit();
+
+        // 6. 释放资源
         sqlSession.close();
     }
 }

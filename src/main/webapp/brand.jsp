@@ -11,7 +11,7 @@
 <body>
 <input type="button" value="新增" id="add"><br>
 <hr>
-<table border="1" cellspacing="0" width="80%">
+<table border="1" cellspacing="0" width="90%">
     <tr>
         <th>序号</th>
         <th>品牌名称</th>
@@ -49,7 +49,7 @@
 
 <script>
     document.getElementById("add").onclick = function (){
-        location.href="/brand-demo/addBrand.jsp";
+        location.href = "/brand-demo/addBrand.jsp";
     }
 </script>
 </body>

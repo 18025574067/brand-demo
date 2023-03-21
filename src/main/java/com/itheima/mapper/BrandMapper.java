@@ -20,7 +20,7 @@ public interface BrandMapper {
     /**
      * 添加
      */
-    @Insert("insert into tb_brand value(null, #{brand_name}, #{company_name}, #{ordered}, #{description}, #{status})")
+    @Insert("insert into tb_brand values (null,#{brandName},#{companyName},#{ordered},#{description},#{status})")
     void add(Brand brand);
 
 
