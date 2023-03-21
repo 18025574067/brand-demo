@@ -10,8 +10,6 @@ import java.io.IOException;
 
 @WebServlet("/addServlet")
 public class AddServlet extends HttpServlet {
-
-
     private BrandService service = new BrandService();
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
