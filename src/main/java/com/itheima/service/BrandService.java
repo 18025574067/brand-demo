@@ -9,10 +9,10 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import java.util.List;
 
 public class BrandService {
+    // 调用BrandMapper.selectAll()
+    SqlSessionFactory factory = SqlSessionFactoryUtils.getSqlSessionFactory();
 
     public List<Brand> selectAll(){
-        // 调用BrandMapper.selectAll()
-        SqlSessionFactory factory = SqlSessionFactoryUtils.getSqlSessionFactory();
 
         // 2. 获取sqlSession
         SqlSession sqlSession = factory.openSession();
