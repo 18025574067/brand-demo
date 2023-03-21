@@ -9,7 +9,7 @@
     <title>Title</title>
 </head>
 <body>
-<input type="button" value="新增"><br>
+<input type="button" value="新增" id="add"><br>
 <hr>
 <table border="1" cellspacing="0" width="80%">
     <tr>
@@ -46,5 +46,11 @@
 
     </c:forEach>
 </table>
+
+<script>
+    document.getElementById("add").onclick = function (){
+        location.href="/brand-demo/addBrand.jsp";
+    }
+</script>
 </body>
 </html>
