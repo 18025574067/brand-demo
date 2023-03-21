@@ -10,9 +10,13 @@ import java.io.IOException;
 
 @WebServlet("/addServlet")
 public class AddServlet extends HttpServlet {
+
+
     private BrandService service = new BrandService();
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        // 处理POST请求的乱码问题
+        request.setCharacterEncoding("utf-8");
         // 1. 接收表单数据，封装成一个Brand对象
         String brandName = request.getParameter("brandName");
         String companyName = request.getParameter("companyName");
@@ -30,6 +34,9 @@ public class AddServlet extends HttpServlet {
 
         // 3. 调用service完成添加
         service.add(brand);
+
+        // 4. 转发到查询所有servlet
+        request.getRequestDispatcher("/selectAllServlet").forward(request, response);
 
     }
 
