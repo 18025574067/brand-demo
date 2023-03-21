@@ -31,4 +31,23 @@ public class BrandService {
 
         return brands;
     }
+
+    /**
+     * 添加
+     * @param brand
+     */
+    public void add(Brand brand){
+        // 2. 获取sqlSession
+        SqlSession sqlSession = factory.openSession();
+
+        // 3. 获取BrandMapper
+        BrandMapper mapper = sqlSession.getMapper(BrandMapper.class);
+
+        // 4. 调用方法
+        mapper.add(brand);
+
+        // 5. 提交数据
+        sqlSession.commit();
+        sqlSession.close();
+    }
 }

@@ -17,8 +17,11 @@ public interface BrandMapper {
     @ResultMap("brandResultMap")
     List<Brand> selectAll();
 
+    /**
+     * 添加
+     */
     @Insert("insert into tb_brand value(null, #{brand_name}, #{company_name}, #{ordered}, #{description}, #{status})")
-    void add();
+    void add(Brand brand);
 
 
 
