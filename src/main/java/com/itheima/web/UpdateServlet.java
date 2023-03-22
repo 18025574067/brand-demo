@@ -18,8 +18,10 @@ public class UpdateServlet extends HttpServlet {
 
         // 处理POST请求的乱码问题
         request.setCharacterEncoding("utf-8");
+
         // 1. 接收表单数据，封装成一个Brand对象
         String id = request.getParameter("id");
+
         String brandName = request.getParameter("brandName");
         String companyName = request.getParameter("companyName");
         String ordered = request.getParameter("ordered");
@@ -28,7 +30,9 @@ public class UpdateServlet extends HttpServlet {
 
         // 2. 封装为一个Brand对象
         Brand brand = new Brand();
+
         brand.setStatus(Integer.parseInt(id));
+
         brand.setBrandName(brandName);
         brand.setCompanyName(companyName);
         brand.setOrdered(Integer.parseInt(ordered));
