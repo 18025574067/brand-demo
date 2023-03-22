@@ -9,7 +9,7 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import java.util.List;
 
 public class BrandService {
-    // 调用BrandMapper.selectAll()
+    // 1. 调用BrandMapper.selectAll()
     SqlSessionFactory factory = SqlSessionFactoryUtils.getSqlSessionFactory();
 
     /**
@@ -27,6 +27,7 @@ public class BrandService {
         // 4. 调用方法
         List<Brand> brands = mapper.selectAll();
 
+        // 5. 释放资源
         sqlSession.close();
 
         return brands;
@@ -68,6 +69,7 @@ public class BrandService {
         // 4. 调用方法
         Brand brand = mapper.selectById(id);
 
+        // 5. 释放资源
         sqlSession.close();
 
         return brand;
