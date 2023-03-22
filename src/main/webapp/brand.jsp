@@ -41,7 +41,7 @@
          <td>禁用</td>
         </c:if>
 
-        <td><a href="/brand-demo/selectByIdServlet?id=${brand.id}">修改</a> <a href="#">删除</a></td>
+        <td><a href="/brand-demo/selectByIdServlet?id=${brand.id}">修改</a> <a href="/brand-demo/deleteByIdServlet?id=${brand.id}">删除</a></td>
     </tr>
 
     </c:forEach>

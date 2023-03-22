@@ -95,4 +95,25 @@ public class BrandService {
         // 6. 释放资源
         sqlSession.close();
     }
+
+    /**
+     * 删除记录
+     * @param brand
+     */
+    public void deleteById(int id){
+        // 2. 获取sqlSession
+        SqlSession sqlSession = factory.openSession();
+
+        // 3. 获取BrandMapper
+        BrandMapper mapper = sqlSession.getMapper(BrandMapper.class);
+
+        // 4. 调用方法
+        mapper.deleteById(id);
+
+        // 5. 提交数据
+        sqlSession.commit();
+
+        // 6. 释放资源
+        sqlSession.close();
+    }
 }
