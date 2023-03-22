@@ -31,7 +31,7 @@ public class UpdateServlet extends HttpServlet {
         // 2. 封装为一个Brand对象
         Brand brand = new Brand();
 
-        brand.setStatus(Integer.parseInt(id));
+        brand.setId(Integer.parseInt(id));
 
         brand.setBrandName(brandName);
         brand.setCompanyName(companyName);
