@@ -16,7 +16,11 @@
 </head>
 <body>
 <h3>修改品牌</h3>
-<form action="/brand-demo/addServlet" method="post">
+<form action="/brand-demo/updateServlet" method="post">
+
+  <%-- 隐藏域，提交ID --%>
+  <input type="hidden" name="id" value="${brand.id}">
+
   品牌名称：<input name="brandName" value="${brand.brandName}"><br>
   企业名称：<input name="companyName" value="${brand.companyName}"><br>
   排序：<input name="ordered" value="${brand.ordered}"><br>
