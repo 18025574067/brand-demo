@@ -41,8 +41,9 @@ public interface BrandMapper {
     @ResultMap("brandResultMap")
     void update(Brand brand);
 
+
     /**
-     * 删除记录
+     * 删除数据
      * @param id
      */
     @Delete("delete from tb_brand where id = #{id}")
