@@ -97,8 +97,8 @@ public class BrandService {
     }
 
     /**
-     * 删除记录
-     * @param brand
+     * 修改
+     * @param id
      */
     public void deleteById(int id){
         // 2. 获取sqlSession
