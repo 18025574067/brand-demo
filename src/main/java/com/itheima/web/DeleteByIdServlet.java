@@ -17,12 +17,14 @@ public class DeleteByIdServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+        // 1. 获取id
         String id = request.getParameter("id");
 
+        // 2. 调用service删除方法
         service.deleteById(Integer.parseInt(id));
 
-        // 3. 转发到brand.jsp
-        request.getRequestDispatcher("/brand.jsp").forward(request, response);
+        // 3. 转发到查询所有servlet
+        request.getRequestDispatcher("/selectAllServlet").forward(request, response);
     }
 
     @Override
